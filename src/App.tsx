@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import {Rating} from './components/Rating/Rating';
 import Accordion from './components/Accordion/Accordion';
+import OnOff from './components/OnOff/OnOff';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Rating value={5}/>
       <Accordion title={'Отзывы'} collapsed={true}/>
       <Accordion title={'Вопросы и ответы'} collapsed={false}/>
+			<OnOff/>
+			<OnOff/>
     </div>
   );
 }

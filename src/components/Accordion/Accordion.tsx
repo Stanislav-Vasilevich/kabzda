@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import AccordionTitle from './AccordionTitle/AccordionTitle';
 import AccordionBody from './AccordionBody/AccordionBody';
 
@@ -8,20 +8,12 @@ type PropsType = {
 }
 
 function Accordion(props: PropsType) {
-  if(props.collapsed) {
-    return (
-      <div>
-        <AccordionTitle title={props.title}/>
-        <AccordionBody/>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <AccordionTitle title={props.title}/>
-      </div>
-    );
-  }
+	return (
+		<div>
+			<AccordionTitle title={props.title}/>
+			{props.collapsed && <AccordionBody/>}
+		</div>
+	);
 }
 
 export default Accordion;
