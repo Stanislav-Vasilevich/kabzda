@@ -3,10 +3,16 @@ import s from './AccordionTitle.module.css';
 
 type PropsType = {
   title: string
+	collapsed?: boolean
+	setCollapsed?: (collapsed: boolean) => void
 }
 
 function AccordionTitle(props: PropsType) {
-  return <h3 className={s.title}>{props.title}</h3>;
+	const onClickHandler = () => {
+		props.setCollapsed && props.setCollapsed(!props.collapsed);
+	}
+
+  return <h4 className={s.title} onClick={onClickHandler}>{props.title}</h4>;
 }
 
 export default AccordionTitle;

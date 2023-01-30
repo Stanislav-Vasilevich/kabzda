@@ -1,20 +1,23 @@
-import React, {useState} from "react";
-import s from './OnOff.module.css';
+import React from 'react';
+import s from "./OnOff.module.css";
 import On from "./On/On";
 import Off from "./Off/Off";
 
-const OnOff = () => {
-	const [select, setSelect] = useState(true);
+type PropsType = {
+	select: boolean
+	setSelect: (select: boolean) => void
+}
 
-	const changeSelect = () => {
-		setSelect(!select);
+const UncontrolledOnOff = (props: PropsType) => {
+	const changeOnOffHandler = () => {
+		props.setSelect(!props.select)
 	}
 
 	return (
-		<div className={s.onOff} onClick={changeSelect}>
-			{select ? <On/> : <Off/>}
+		<div className={s.onOff} onClick={changeOnOffHandler}>
+			{props.select ? <On/> : <Off/>}
 		</div>
 	)
-}
+};
 
-export default OnOff;
+export default UncontrolledOnOff;
