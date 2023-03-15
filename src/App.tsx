@@ -24,7 +24,7 @@ function App() {
 				collapsed={collapsedAccordion}
 				setCollapsed={setCollapsedAccordion}
 			/>
-      <UncontrolledAccordion/>
+      <UncontrolledAccordion title={'Неконтролируемый аккордион'}/>
 			<h4 className={'title title_task'}>Контролируемый переключатель</h4>
 			<OnOff select={select} setSelect={setSelect}/>
 			<h4 className={'title title_task'}>Неконтролируемый переключатель</h4>

@@ -2,13 +2,17 @@ import React, {useState} from 'react';
 import AccordionTitle from "./AccordionTitle/AccordionTitle";
 import AccordionBody from "./AccordionBody/AccordionBody";
 
-const UncontrolledAccordion = () => {
+type PropsType = {
+	title: string
+}
+
+const UncontrolledAccordion = (props: PropsType) => {
 	const [collapsed, setCollapsed] = useState(false);
 
 	return (
 		<div>
 			<AccordionTitle
-				title={'Неконтролируемый аккордион'}
+				title={props.title}
 				collapsed={collapsed}
 				setCollapsed={setCollapsed}
 			/>

@@ -7,4 +7,4 @@ export default {
 	component: UncontrolledAccordion,
 } as ComponentMeta<typeof UncontrolledAccordion>;
 
-export const UncontrolledAccordionChange: ComponentStory<typeof UncontrolledAccordion> = () => <UncontrolledAccordion/>;
+export const UncontrolledAccordionChange: ComponentStory<typeof UncontrolledAccordion> = () => <UncontrolledAccordion title={'Title'}/>;
