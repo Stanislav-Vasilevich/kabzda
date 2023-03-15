@@ -3,7 +3,7 @@ import s from './OnOff.module.css';
 import On from "./On/On";
 import Off from "./Off/Off";
 
-const OnOff = () => {
+const UncontrolledOnOff = () => {
 	const [select, setSelect] = useState(true);
 
 	const changeSelect = () => {
@@ -17,4 +17,4 @@ const OnOff = () => {
 	)
 }
 
-export default OnOff;
+export default UncontrolledOnOff;

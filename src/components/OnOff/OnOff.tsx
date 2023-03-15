@@ -8,7 +8,7 @@ type PropsType = {
 	setSelect: (select: boolean) => void
 }
 
-const UncontrolledOnOff = (props: PropsType) => {
+const OnOff = (props: PropsType) => {
 	const changeOnOffHandler = () => {
 		props.setSelect(!props.select)
 	}
@@ -20,4 +20,4 @@ const UncontrolledOnOff = (props: PropsType) => {
 	)
 };
 
-export default UncontrolledOnOff;
+export default OnOff;
