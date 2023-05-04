@@ -1,8 +1,9 @@
 import React from 'react';
 import s from './AccordionTitle.module.css';
+import {SelectItemsType} from '../Accordion';
 
 type PropsType = {
-  title: string
+  title: SelectItemsType
 	collapsed?: boolean
 	setCollapsed?: (collapsed: boolean) => void
 }
@@ -12,7 +13,7 @@ function AccordionTitle(props: PropsType) {
 		props.setCollapsed && props.setCollapsed(!props.collapsed);
 	}
 
-  return <h4 className={s.title} onClick={onClickHandler}>{props.title}</h4>;
+  return <div className={s.title} onClick={onClickHandler}>{props.title.value} <span className={s.arrow}></span></div>;
 }
 
 export default AccordionTitle;

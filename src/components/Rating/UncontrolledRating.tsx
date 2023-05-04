@@ -6,7 +6,7 @@ const UncontrolledRating = () => {
 	const [value, setValue] = useState(4)
 
 	return (
-		<div>
+		<div className={s.rating}>
 			<h4 className={s.title}>Неконтролируемый рэйтинг</h4>
 			<Star value={1} selected={value > 0} setRating={() => setValue(1)}/>
 			<Star value={2} selected={value > 1} setRating={() => setValue(2)}/>

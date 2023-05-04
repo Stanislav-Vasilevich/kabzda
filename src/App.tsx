@@ -20,11 +20,10 @@ function App() {
       <Rating value={valueRating} setValue={setValueRating}/>
 			<UncontrolledRating/>
       <Accordion
-				title={'Контролируемый аккордион'}
 				collapsed={collapsedAccordion}
 				setCollapsed={setCollapsedAccordion}
 			/>
-      <UncontrolledAccordion title={'Неконтролируемый аккордион'}/>
+      <UncontrolledAccordion/>
 			<h4 className={'title title_task'}>Контролируемый переключатель</h4>
 			<OnOff select={select} setSelect={setSelect}/>
 			<h4 className={'title title_task'}>Неконтролируемый переключатель</h4>

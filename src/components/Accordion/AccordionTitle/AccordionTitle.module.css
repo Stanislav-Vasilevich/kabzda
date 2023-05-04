@@ -1,8 +1,43 @@
 .title {
 	font-size: 26px;
+	font-weight: bold;
 	text-transform: unset;
 	text-align: start;
 	line-height: 1;
 	color: grey;
   cursor: pointer;
+	margin: 0 0 30px;
+}
+
+.arrow {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+
+.arrow::before {
+	content: '';
+	width: 10px;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: block;
+	background: grey;
+	transform-origin: right bottom;
+	transform: rotate(45deg);
+}
+
+.arrow::after {
+	content: '';
+	width: 10px;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: block;
+	background: grey;
+	transform-origin: 0 0;
+	transform: rotate(-45deg) translateX(-1px);
 }

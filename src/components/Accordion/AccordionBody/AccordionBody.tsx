@@ -1,13 +1,27 @@
 import React from 'react';
+import {SelectItemsType} from '../Accordion';
+import s from './AccordionBody.module.css';
 
-function AccordionBody() {
+type PropsType = {
+  items: Array<SelectItemsType>
+  setSelectTitle: (option: SelectItemsType) => void
+  setCollapsed?: (collapsed: boolean) => void
+}
+
+function AccordionBody(props: PropsType) {
+  const setTitleSelect = (item: SelectItemsType) => {
+    props.setSelectTitle(item);
+
+    if(props.setCollapsed) {
+      props.setCollapsed(false);
+    }
+  }
+
   return (
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
+    <ul className={s.list}>
+      {props.items.map(i => {
+        return <li className={s.item} onClick={() => setTitleSelect(i)}>{i.value}</li>
+      })}
     </ul>
   );
 }

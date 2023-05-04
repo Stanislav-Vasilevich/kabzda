@@ -1,0 +1,17 @@
+.list {
+  padding: 0;
+  list-style-position: inside;
+  list-style-type: none;
+  margin: -20px 0 30px;
+}
+
+.item {
+  width: max-content;
+  cursor: pointer;
+  transition: .4s all;
+  padding: 0 0 0 20px;
+}
+
+.item:hover {
+  padding: 0 0 0 30px;
+}
