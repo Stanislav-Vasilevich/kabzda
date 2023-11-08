@@ -10,7 +10,7 @@ type PropsType = {
 export function Rating(props: PropsType) {
 	return (
 		<div className={s.rating}>
-			<h4 className={s.title}>Конролируемый рейтинг</h4>
+			<h4 className={s.title}>Контролируемый рейтинг</h4>
 			<Star value={1} selected={props.value > 0} setRating={props.setValue}/>
 			<Star value={2} selected={props.value > 1} setRating={props.setValue}/>
 			<Star value={3} selected={props.value > 2} setRating={props.setValue}/>
